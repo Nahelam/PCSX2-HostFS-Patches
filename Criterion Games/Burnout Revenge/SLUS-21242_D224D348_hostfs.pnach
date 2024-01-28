@@ -1,0 +1,65 @@
+gametitle=Burnout Revenge (SLUS-21242) [NTSC-U/C]
+
+[HostFS]
+author=Nehalem
+description=Load game files directly from a folder
+
+// jal to stub in _sceSifLoadModule
+patch=0,EE,2044D0B0,extended,0C0E28B6
+
+// jal to stub in sceSifRebootIop
+patch=0,EE,2044D52C,extended,0060202D
+patch=0,EE,2044D530,extended,0C0E28B6
+patch=0,EE,2044D534,extended,0200282D
+patch=0,EE,2044D538,extended,10000005
+
+// Make room in sceCdInit
+patch=0,EE,2038A2D0,extended,03E00008
+patch=0,EE,2038A2D4,extended,00000000
+
+// Path patching stub (cdrom -> host)
+patch=0,EE,2038A2D8,extended,3C021797
+patch=0,EE,2038A2DC,extended,8CAD000C
+patch=0,EE,2038A2E0,extended,3442979D
+patch=0,EE,2038A2E4,extended,00021478
+patch=0,EE,2038A2E8,extended,64427473
+patch=0,EE,2038A2EC,extended,00021438
+patch=0,EE,2038A2F0,extended,64426F68
+patch=0,EE,2038A2F4,extended,FC820000
+patch=0,EE,2038A2F8,extended,80A30008
+patch=0,EE,2038A2FC,extended,1060001F
+patch=0,EE,2038A300,extended,00000000
+patch=0,EE,2038A304,extended,3C0C5346
+patch=0,EE,2038A308,extended,24020008
+patch=0,EE,2038A30C,extended,24090010
+patch=0,EE,2038A310,extended,258C5447
+patch=0,EE,2038A314,extended,240A003B
+patch=0,EE,2038A318,extended,1000000B
+patch=0,EE,2038A31C,extended,240B005C
+patch=0,EE,2038A320,extended,106A0017
+patch=0,EE,2038A324,extended,24420001
+patch=0,EE,2038A328,extended,146B0002
+patch=0,EE,2038A32C,extended,00A24021
+patch=0,EE,2038A330,extended,2403002F
+patch=0,EE,2038A334,extended,A0E30000
+patch=0,EE,2038A338,extended,00403025
+patch=0,EE,2038A33C,extended,81030000
+patch=0,EE,2038A340,extended,1060000F
+patch=0,EE,2038A344,extended,00000000
+patch=0,EE,2038A348,extended,00823821
+patch=0,EE,2038A34C,extended,1449FFF4
+patch=0,EE,2038A350,extended,00403025
+patch=0,EE,2038A354,extended,15ACFFF2
+patch=0,EE,2038A358,extended,00000000
+patch=0,EE,2038A35C,extended,3C022C29
+patch=0,EE,2038A360,extended,64422497
+patch=0,EE,2038A364,extended,00021478
+patch=0,EE,2038A368,extended,64425453
+patch=0,EE,2038A36C,extended,00021438
+patch=0,EE,2038A370,extended,64424F48
+patch=0,EE,2038A374,extended,03E00008
+patch=0,EE,2038A378,extended,FC820010
+patch=0,EE,2038A37C,extended,24060008
+patch=0,EE,2038A380,extended,00862021
+patch=0,EE,2038A384,extended,03E00008
+patch=0,EE,2038A388,extended,A0800000
