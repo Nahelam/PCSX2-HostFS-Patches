@@ -20,10 +20,14 @@ To do so, I wrote a tiny stub that replaces modules paths (cdrom -> host) and th
    - In the cheats settings, make sure `Enable Cheats` and `HostFS` are checked
 6. Start the game, if you did everything correctly it should start normally
 
+At this point PCSX2 will only read `SYSTEM.CNF` and the game executable from your disc image, everything else will be read directly from the folder, follow the additional steps if you want to shrink your disc image to a "minimal" one so it will only contain these two files.
+
+Making PCSX2 load the game ELF executable directly from the folder was considered but there was some issues on the UI side, the detection of the game and the toggleable cheats list weren't working properly so I decided to stick with the shrinked disc image method for this tutorial.
+
 ### Additional steps (optional)
-Now that you can start your game through HostFS, you may want to get rid of the disc image you copied and extracted earlier.\
-On the other hand PCSX2 requires a disc image to be present in the folder to be able to detect a game and its cheat list correctly.\
-One way that I found to work around this issue is to generate a "minimal" disc image only containing the necessary data for PCSX2.
+Now that you can start your game through HostFS, you may want to shrink the disc image you copied and extracted earlier.
+
+I found out that creating a "minimal" disc image was possible without the help of any external tools.
 
 Here are the additional steps to do so:
 
@@ -37,7 +41,9 @@ Here are the additional steps to do so:
 14. On PCSX2 top menu, select `Settings` then `Rescan All Games`, if everything has been done correctly you should see your game twice
 15. Now move your full game disc image somewhere else and only leave the "minimal" one
 16. `Rescan All Games` again then try to start the game, it should start normally
-17. If the game started normally and you were planning to remove the full game disc image, it's time!
+17. If the game starts normally and you were planning to remove the full game disc image, it's time!\
+    You can also remove the game executable and the `SYSTEM.CNF` file from the folder as PCSX2 will directly read them from the "minimal" disc image that you just created.
+
     
 ## Games with missing HostFS module
 There are actually three games that are missing the `GTFSHOST.IRX` module in their IOP folder: AirBlade, Burnout Dominator and Black, fortunately you can copy the module from the other games having it, I can confirm the following compatiblity:
