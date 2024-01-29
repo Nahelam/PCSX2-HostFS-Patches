@@ -31,7 +31,7 @@ I found out that creating a "minimal" disc image was possible without the help o
 
 Here are the additional steps to do so:
 
-7. On PCSX2 top menu, select `Tools` then `Save CDVD Block Dump`
+7. On PCSX2 top menu, select `Tools` then check `Save CDVD Block Dump`
 8. You will be prompted to select a folder, select the one that we are currently working in
 9. Right click on the game then select `Boot and Debug`, you will get a black screen, this is intended
 10. Wait a few seconds then shut down the game and close the debugger if it opened
