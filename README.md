@@ -21,4 +21,4 @@ Here are the existing HostFS patches that I know of:
 
 
 ## My contribution to the HostFS world
-- [Criterion Games PlayStation 2 titles](https://github.com/Nahelam/PCSX2-HostFS-Patches/tree/main/Criterion%20Games)
+- [Criterion Games HostFS](https://github.com/Nahelam/PCSX2-HostFS-Patches/tree/main/Criterion%20Games)
