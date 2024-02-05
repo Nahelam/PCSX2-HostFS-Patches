@@ -31,14 +31,14 @@ I found out that creating a "minimal" disc image was possible without the help o
 
 Here are the additional steps to do so:
 
-7. On PCSX2 top menu, select `Tools` then check `Save CDVD Block Dump`
+7. In the PCSX2 menu bar, select `Tools` then check `Save CDVD Block Dump`
 8. You will be prompted to select a folder, select the one that we are currently working in
 9. Right click on the game then select `Boot and Debug`, you will get a black screen, this is intended
 10. Wait a few seconds then shut down the game and close the debugger if it opened
 11. A file with the `.dump` extension should have been created in our folder, this will be our new "minimal" disc image
-12. On PCSX2 top menu, select `Tools` then uncheck `Save CDVD Block Dump` as we don't need it anymore
+12. In the PCSX2 menu bar, select `Tools` then uncheck `Save CDVD Block Dump` as we don't need it anymore
 13. Rename the `.dump` file to whatever you want but make sure to change its extension to `.iso`
-14. On PCSX2 top menu, select `Settings` then `Rescan All Games`, if everything has been done correctly you should see your game twice
+14. In the PCSX2 menu bar, select `Settings` then `Rescan All Games`, if everything has been done correctly you should see your game twice
 15. Now move your full game disc image somewhere else and only leave the "minimal" one
 16. `Rescan All Games` again then try to start the game, it should start normally
 17. If the game starts normally and you were planning to remove the full game disc image, it's time!\
