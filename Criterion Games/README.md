@@ -12,7 +12,7 @@ To do so, I wrote a tiny stub that replaces modules paths (cdrom -> host) and th
 
 ## Setting up PCSX2
 1. Create a new folder and move your game disc image (.iso) into it
-2. Extract your game disc image in the folder you just moved it to using the extractor of your choice (I personnally use 7-Zip)
+2. Extract your game disc image in the folder you just moved it to (<ins>don't remove it once extracted!</ins>) using the extractor of your choice (I personnally use 7-Zip)
 3. Add the folder you just created in the PCSX2 game scanning list, deny recursive scan
 4. Download the HostFS patch corresponding to your game region from this repository and place it into the PCSX2 `cheats` folder
 5. On PCSX2 right click on your freshly scanned game, select `Properties` then:
