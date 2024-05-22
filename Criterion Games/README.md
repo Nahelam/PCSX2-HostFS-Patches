@@ -25,9 +25,9 @@ At this point PCSX2 will only read `SYSTEM.CNF` and the game executable from you
 Making PCSX2 load the game ELF executable directly from the folder was considered but there was some issues on the UI side, the detection of the game and the toggleable cheats list weren't working properly so I decided to stick with the shrinked disc image method for this tutorial.
 
 ### Additional steps (optional)
-Now that you can start your game through HostFS, you may want to shrink the disc image that you copied and extracted earlier.
+Now that you can start your game through HostFS, you may want to shrink the disc image that still have to reside in your folder.
 
-To do so, you have to create a new disc image which only contains the game binary and the `SYSTEM.CNF` file using an external tool of your choice.
+To do so, create a new disc image which only contains the game binary and the `SYSTEM.CNF` file using an external tool of your choice.
 
 Here is an example using `mkisofs` from [cdrtools](https://sourceforge.net/projects/cdrtools/files/alpha/win32/cdrtools-1.11a12-win32-bin.zip/download):
 
