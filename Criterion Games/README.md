@@ -12,7 +12,7 @@ To do so, I wrote a tiny stub that replaces modules paths (cdrom -> host) and th
 
 ## Setting up PCSX2
 1. Create a new folder and move your game disc image (.iso) into it
-2. Extract your game disc image in the folder you just moved it to (<ins>don't remove it once extracted!</ins>) using the extractor of your choice (I personnally use 7-Zip)
+2. Extract your game disc image files in the folder you just moved it to (<ins>don't remove it once extracted!</ins>) using the extractor of your choice (I personnally use 7-Zip)
 3. Add the folder you just created in the PCSX2 game scanning list, deny recursive scan
 4. Download the HostFS patch corresponding to your game region from this repository and place it into the PCSX2 `cheats` folder
 5. On PCSX2 right click on your freshly scanned game, select `Properties` then:
@@ -27,23 +27,11 @@ Making PCSX2 load the game ELF executable directly from the folder was considere
 ### Additional steps (optional)
 Now that you can start your game through HostFS, you may want to shrink the disc image that you copied and extracted earlier.
 
-I found out that creating a "minimal" disc image was possible without the help of any external tools.
+To do so, you have to create a new disc image which only contains the game binary and the `SYSTEM.CNF` file using an external tool of your choice.
 
-Here are the additional steps to do so:
+Here is an example using `mkisofs` from [cdrtools](https://sourceforge.net/projects/cdrtools/files/alpha/win32/cdrtools-1.11a12-win32-bin.zip/download):
 
-7. In the PCSX2 menu bar, select `Tools` then check `Save CDVD Block Dump`
-8. You will be prompted to select a folder, select the one that we are currently working in
-9. Right click on the game then select `Boot and Debug`, you will get a black screen, this is intended
-10. Wait a few seconds then shut down the game and close the debugger if it opened
-11. A file with the `.dump` extension should have been created in our folder, this will be our new "minimal" disc image
-12. In the PCSX2 menu bar, select `Tools` then uncheck `Save CDVD Block Dump` as we don't need it anymore
-13. Rename the `.dump` file to whatever you want but make sure to change its extension to `.iso`
-14. In the PCSX2 menu bar, select `Settings` then `Rescan All Games`, if everything has been done correctly you should see your game twice
-15. Now move your full game disc image somewhere else and only leave the "minimal" one
-16. `Rescan All Games` again then try to start the game, it should start normally
-17. If the game starts normally and you were planning to remove the full game disc image, it's time!\
-    You can also remove the game executable and the `SYSTEM.CNF` file from the folder as PCSX2 will directly read them from the "minimal" disc image that you just created.
-
+https://github.com/Nahelam/PCSX2-HostFS-Patches/assets/128867759/f8748a8d-a063-4f84-a695-8985f503fd41
     
 ## Games with missing HostFS module
 There are actually three games that are missing the `GTFSHOST.IRX` module in their IOP folder: AirBlade, Burnout Dominator and Black, fortunately you can copy the module from the other games having it, I can confirm the following compatiblity:
