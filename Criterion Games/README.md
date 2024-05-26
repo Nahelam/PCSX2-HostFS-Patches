@@ -41,4 +41,4 @@ There are actually three games that are missing the `GTFSHOST.IRX` module in the
 ## Caveats
 - In Burnout 3 you won't be able to boot the NFS demo (lol)
 - In Burnout 3 and Burnout Revenge you won't be able to boot into the network configuration utility, make sure you already have one saved in your memory card if you want to play online
-- In Burnout 3, loading a different IOP module than usual will invalidate the patches relying on IOP addresses, if you are using the [old network play patches](https://github.com/Nahelam/PCSX2-Burnout-Mods/tree/main/Burnout%203%20Takedown/Network%20Play/Old%20Patches), please use the [new ones](https://github.com/Nahelam/PCSX2-Burnout-Mods/tree/main/Burnout%203%20Takedown/Network%20Play) instead.
+- In Burnout 3, loading a different IOP module than usual will invalidate the patches relying on IOP addresses, if you are using older network play patches, please use the [new ones](https://github.com/Nahelam/PCSX2-Burnout-Mods/tree/main/Burnout%203%20Takedown/Network%20Play) instead.
